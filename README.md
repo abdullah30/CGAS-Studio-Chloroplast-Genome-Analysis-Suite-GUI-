@@ -1,55 +1,83 @@
-# CGAS Studio — Quick Start
+# CGAS Studio — Chloroplast Genome Analysis Suite (GUI)
 
-## Requirements
 
-```bash
-pip install PySide6 biopython pandas openpyxl python-docx
-```
+**CGAS Studio** is a graphical user interface (GUI) for the [Chloroplast Genome Analysis Suite (CGAS)](https://github.com/abdullah30/Chloroplast-Genome-Analysis-Suite-CGAS), covering Modules 3–14. It allows researchers to run complete chloroplast genome analyses through a simple point-and-click interface — no command-line experience required.
 
-## Launch
+---
 
-```bash
-# From the CGAS_Studio folder:
-python launch_cgas_studio.py
+## 🔗 Full Documentation & Command-Line Version
 
-# Or directly:
-python cgas_studio.py
-```
+All detailed documentation, module descriptions, example datasets, and the original command-line CGAS are available at the main CGAS repository:
 
-## Folder layout
+> 📦 **[Chloroplast Genome Analysis Suite (CGAS)](https://github.com/abdullah30/Chloroplast-Genome-Analysis-Suite-CGAS)**
 
-```
-CGAS_Studio/
-├── cgas_studio.py        ← Main GUI application
-├── cgas_module3.py       ← Module 3 backend (Gene Comparison)
-├── launch_cgas_studio.py ← Convenience launcher
-└── README.md
-```
+---
 
-## Using Module 3
+## ⬇️ Download & Run
 
-1. Launch the app — Module 03 tab opens automatically
-2. **Reference .gb** — pick your reference GenBank file (e.g. a closely related species)
-3. **Target folder** — pick the folder containing your target `.gb` files  
-   (leave blank to use the current working directory)
-4. **Output folder** — where results are saved (default: `module_3/`)
-5. Click **▶ Run Module 3**
-6. Results appear inline in the Comparison and Normalization Issues tabs
-7. Use **Open Output Folder** or **Open Excel Report** buttons to access files
+1. Download the latest **CGAS_Studio_v1.0.zip** from the [Releases](https://github.com/abdullah30/CGAS-Studio-Chloroplast-Genome-Analysis-Suite-GUI-/releases) page
+2. Extract the zip file anywhere on your computer
+3. Double-click **`CGAS_Studio.exe`** to launch
 
-## Output
+That's it — no installation, no Python, no configuration needed.
 
-```
-module_3/
-├── revise_annotations/    ← Normalized GenBank files (one per target)
-└── comparison_results.xlsx
-    ├── Comparison          ← Gene-by-gene status per target
-    └── Normalization_Issues← Features that could not be matched
-```
+> **Recommended:** 16 GB RAM and Intel Core i5 or better for large datasets.
 
-## Adding more modules
+---
 
-Each new module needs:
-1. A `run(params, progress_cb) -> dict` function in its backend file
-2. A panel class (e.g. `Module4Panel`) added to `cgas_studio.py`
-3. Its number added to the `IMPLEMENTED` set in `cgas_studio.py`
+## 🧬 Modules Included (3–14)
+
+| Module | Analysis |
+|--------|----------|
+| **03** | Gene Comparison & Normalization |
+| **04** | NCBI Submission Preparation |
+| **05** | Gene Comparative Analysis |
+| **06** | Gene Content Tables (Word) |
+| **07** | Genome Structure — LSC / SSC / IR lengths & GC content |
+| **08** | Codon Usage — RSCU heatmap & bar plot |
+| **09** | Amino Acid Composition |
+| **10** | SNP & Substitution Analysis — Ts/Tv ratio |
+| **11** | Gene & tRNA Intron Analysis |
+| **12** | SSR / Microsatellite Analysis |
+| **13** | Nucleotide Diversity (π) |
+| **14** | Phylogenomics — supermatrix builder + IQ-TREE inference |
+
+---
+
+## 📦 What Is Inside the Package
+
+Everything needed to run all analyses is bundled — nothing extra to install:
+
+| Tool | Purpose |
+|------|---------|
+| **R 4.6.0** | Publication-quality figures (PDF + PNG) |
+| **MAFFT** | Multiple sequence alignment (Modules 13, 14) |
+| **IQ-TREE 3** | Maximum likelihood phylogeny (Module 14) |
+| **Java JRE 21** | Required to run MACSE |
+| **MACSE** | Codon-aware CDS alignment (Module 14) |
+
+---
+
+## 📂 Input & Output
+
+- **Input:** GenBank files (`.gb` / `.gbk`) for most modules; pairwise FASTA alignments for Module 10
+- **Output:** Excel tables, Word documents, PDF and PNG figures — all saved into an output folder alongside your input data
+
+---
+
+## 📄 Citation
+
+If you use CGAS Studio in your research, please cite:
+
+> Abdullah, Yan, R. and Tian, X. (2026), CGAS (Chloroplast Genome Analysis Suite): An automated python pipeline for comprehensive comparative chloroplast genomics. *iMetaOmics* e70093. https://doi.org/10.1002/imo2.70093
+
+Please also cite bundled tools as appropriate — see the [CGAS repository](https://github.com/abdullah30/Chloroplast-Genome-Analysis-Suite-CGAS) for full citation details.
+
+---
+
+## 👤 Author
+
+**Abdullah** — Plant Evolutionary Genomics & Comparative Plastomics
+
+📧 [abd.ullah30@yahoo.com](mailto:abd.ullah30@yahoo.com)  
+🔗 [GitHub: abdullah30](https://github.com/abdullah30)
