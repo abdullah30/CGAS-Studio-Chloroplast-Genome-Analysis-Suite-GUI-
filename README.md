@@ -1,7 +1,7 @@
 # CGAS Studio — Chloroplast Genome Analysis Suite (GUI)
 
 
-**Download CGAS Studio:** [https://figshare.com/s/402d55b1ad497a1f16ba](https://figshare.com/s/402d55b1ad497a1f16ba)
+**Download CGAS Studio:** [https://doi.org/10.6084/m9.figshare.32593494](https://doi.org/10.6084/m9.figshare.32593494) — please see [⬇️ Download & Run](#️-download--run) below
 
 **CGAS Studio** is a graphical user interface (GUI) for the [Chloroplast Genome Analysis Suite (CGAS)](https://github.com/abdullah30/Chloroplast-Genome-Analysis-Suite-CGAS), covering Modules 3–14. It allows researchers to run complete chloroplast genome analyses through a simple point-and-click interface — no command-line experience required.
 
@@ -17,7 +17,7 @@ All detailed documentation, module descriptions, example datasets, and the origi
 
 ## ⬇️ Download & Run
 
-1. Download the latest **CGAS_Studio_v1.0.zip** from the [Releases](https://github.com/abdullah30/CGAS-Studio-Chloroplast-Genome-Analysis-Suite-GUI-/releases) page
+1. [**Download CGAS_Studio_v1.0.zip**](https://figshare.com/ndownloader/files/65328519) (hosted on figshare: https://doi.org/10.6084/m9.figshare.32593494)
 2. Extract the zip file anywhere on your computer
 3. Double-click **`CGAS_Studio.exe`** to launch
 
